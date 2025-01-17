@@ -15,7 +15,7 @@ In this code, `strcpy` is used to copy the string pointed to by `src` to the mem
 1. **The target buffer size is unclear**: `s` is allocated `0x254` bytes of memory (596 bytes), but `strcpy` does not check the size of the target buffer and directly copies the contents of `src` to the `s + 2` position. If the length of the `src` string exceeds the memory space available after the `s + 2` position, `strcpy` will cause a buffer overflow.
 2. **The size of `src` is not verified**: `src` is obtained from `sub_2BA8C(a1, "mac", &unk_EDD28)`, and it is not ensured that the string does not exceed the size of the memory space after the `s + 2` offset. If the length of `src` is too long and exceeds the memory range allocated by `s`, `strcpy` will write to the out-of-bounds memory area, causing an overflow.
 
-![image-20250117235701292](F:\Desktop\工具\二进制漏洞\IoT\img\image-20250117235701292.png)
+![image-20250117235701292](/img/image-20250117235701292.png)
 
 ## POC
 
@@ -33,5 +33,5 @@ if __name__ == "__main__":
     send_payload("http://192.168.1.100/goform/GetParentControlInfo", create_payload())
 ```
 
-![image-20250117235917205](F:\Desktop\工具\二进制漏洞\IoT\img\image-20250117235917205.png)
+![image-20250117235917205](/img/image-20250117235917205.png)
 
